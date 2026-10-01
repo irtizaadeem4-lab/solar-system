@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar System — three.js</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="scene"></canvas>
+
+      <div id="hud">
+        <h1>Solar System</h1>
+        <div class="controls">
+          <button id="pause-btn" title="Pause / resume">⏸</button>
+          <label>
+            Speed
+            <input id="speed" type="range" min="0" max="4" step="0.05" value="1" />
+          </label>
+          <label class="checkbox">
+            <input id="orbits" type="checkbox" checked /> Orbits
+          </label>
+          <label class="checkbox">
+            <input id="labels-toggle" type="checkbox" checked /> Labels
+          </label>
+        </div>
+        <div id="planet-info" class="hidden"></div>
+      </div>
+
+      <div id="labels"></div>
+
+      <div id="hint">Drag to orbit · Scroll to zoom · Click a planet for details</div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
